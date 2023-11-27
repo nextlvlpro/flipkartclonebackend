@@ -40,7 +40,7 @@ app.use(cors({
 
 
 //mongo connection
-    mongoose.connect(MONGOURL).then((res) => {
+    mongoose.connect('mongodb+srv://bhanusharma089:tFDx8EqoU66rx8Fh@cluster0.mufb7my.mongodb.net/flipkartclone').then((res) => {
         console.log('Mongo connected');
     }).catch(err => console.log(err))
 
