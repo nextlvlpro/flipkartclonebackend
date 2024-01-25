@@ -24,7 +24,7 @@ const ordersRoute = require('./Routes/ordersRoute.js')
 
 // envdata
 const PORT = process.env.PORT
-const MONGOURL = process.env.MONGOCONNECTURL
+const MONGOURL = process.env.MONGOCONNECTUR
 
 //jwt Key
 const jwtKey = 'adjfvaiywvfadvclisgwef3563ewtw4yterwyheshuejh'
@@ -35,12 +35,12 @@ app.use(cookieParser())
 app.use(express.json())
 app.use(cors({
     credentials:true,
-    origin:'https://flipkarrt.onrender.com'
+    origin:['http://localhost:5173','http://192.168.143.135:5173']
 }))
 
 
 //mongo connection
-    mongoose.connect('mongodb+srv://bhanusharma089:tFDx8EqoU66rx8Fh@cluster0.mufb7my.mongodb.net/flipkartclone').then((res) => {
+    mongoose.connect(MONGOURL).then((res) => {
         console.log('Mongo connected');
     }).catch(err => console.log(err))
 

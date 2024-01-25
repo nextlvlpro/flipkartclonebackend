@@ -27,7 +27,7 @@ loginRoute.post('/login', async(req,res) => {
 })
 
 loginRoute.post('/logout', (req,res) => {
-   res.cookie('token','', {sameSite:'none', secure:true}).json('done')
+   res.cookie('token','').json('done')
 })
 
 module.exports = loginRoute
