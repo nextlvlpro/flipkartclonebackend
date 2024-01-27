@@ -35,7 +35,7 @@ app.use(cookieParser())
 app.use(express.json())
 app.use(cors({
     credentials:true,
-    origin:'http://flipkarrt.onrender.com'
+    origin:'https://flipkarrt.onrender.com'
 }))
 
 
