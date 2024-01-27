@@ -24,7 +24,7 @@ const ordersRoute = require('./Routes/ordersRoute.js')
 
 // envdata
 const PORT = process.env.PORT
-const MONGOURL = process.env.MONGOCONNECTURL
+
 
 //jwt Key
 const jwtKey = 'adjfvaiywvfadvclisgwef3563ewtw4yterwyheshuejh'
@@ -40,7 +40,7 @@ app.use(cors({
 
 
 //mongo connection
-    mongoose.connect(MONGOURL).then((res) => {
+    mongoose.connect('mongodb+srv://bhanusharma089:ajNXSySxVVrFPePp@cluster0.mufb7my.mongodb.net/flipkartclone').then((res) => {
         console.log('Mongo connected');
     }).catch(err => console.log(err))
 
